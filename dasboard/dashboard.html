@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Health Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">Dashboard</div>
+            <div class="sidebar-options">
+                <button onclick="filterMachine('Machine A')">Machine A</button>
+                <button onclick="filterMachine('Machine B')">Machine B</button>
+                <button onclick="filterMachine('Machine C')">Machine C</button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+<div class="heud">Artificial Intelligence and Machine Learning for OEMs</div>
+            <h1 id="machineName">Machine A</h1>
+            <div class="charts">
+                <div class="chart-container">
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="tempChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="energyChart"></canvas>
+                </div>
+            </div>
+
+            <!-- KPIs -->
+            <div class="kpis">
+                <div class="kpi-item">
+                    <h2>Production Rate</h2>
+                    <p id="productionRate">20 units/hr</p>
+                </div>
+                <div class="kpi-item">
+                    <h2>Machine Health</h2>
+                    <p id="machineHealth">Good</p>
+                </div>
+                <div class="kpi-item">
+                    <h2>Maintenance Alert</h2>
+                    <p id="maintenanceAlert">Scheduled in 5 days</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
